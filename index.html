@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentines day</title>
+  <link rel="stylesheet" href="./pages/index.css">
+  <meta name="description" content="приглашение на романтику (с выбором(пофикшены возможные ошибки))">
+  <meta name="keywords" content="html, css, js">
+  <meta name="author" content="Andrei Kovzik">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+    </header>
+    <main class="content">
+      <section class="lead">
+        <h2 class="question">Willst du mein Valentinsschatz sein?</h2>
+        <img src="./images/Be my valentine.jfif" class="dog" alt="dog">
+        <div class="buttons">
+          <button class="buttony" id="yesButton">Ja!</button>
+          <button class="buttonn" id="noButton">Nein...</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      
+    </footer>
+  </div>
+  <script>
+    const yesButton = document.querySelector('#yesButton');
+    const noButton = document.querySelector('#noButton');
+
+    let scale = 1;
+
+    noButton.addEventListener('click', () => {
+      scale *= 1.20;
+      yesButton.style.transform = `scale(${scale})`;
+    });
+
+    yesButton.addEventListener('click', () => {
+      window.location.assign('yes.html');
+    })
+  </script>
+</body>
+</html>
