@@ -69,8 +69,10 @@
 }
 
 .container {
-    display: flex;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 300px;
+    justify-items: center;
 }
 
 .photo {
@@ -84,4 +86,11 @@
     max-width: 150px;
     rotate: 355deg;
     box-shadow: 0px 2px 20px 15px rgb(195 50 220 / 75%);
+}
+
+.photo2 {
+    max-width: 150px;
+    box-shadow: 0px 2px 20px 15px rgb(195 50 220 / 75%);
+    rotate: 5deg;
+    grid-column: span 2;
 }
